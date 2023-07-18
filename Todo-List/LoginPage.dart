@@ -100,7 +100,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: Text('To-Do List'),
+          title: const Text('To-Do List'),
           backgroundColor: Colors.indigo,
           foregroundColor: Colors.white,
         ),
@@ -109,24 +109,24 @@ class _MyLoginPageState extends State<MyLoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 50, right: 50, left: 50),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 50, right: 50, left: 50),
                 child: HeaderText(label: 'LogIN'),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 15, right: 50, left: 50),
                 child: TextField(
-                  style: TextStyle(color: Colors.indigo),
+                  style: const TextStyle(color: Colors.indigo),
                   controller: loginController,
                   decoration: InputDecoration(
-                    labelStyle: TextStyle(color: Colors.indigo),
+                    labelStyle: const TextStyle(color: Colors.indigo),
                     labelText: 'Email',
                     filled: true,
                     fillColor: Colors.white,
-                    focusedErrorBorder: UnderlineInputBorder(
+                    focusedErrorBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.indigo),
                     ),
-                    errorBorder: UnderlineInputBorder(
+                    errorBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.indigo),
                     ),
                     errorText: usernameError.isNotEmpty ? usernameError : null,
@@ -139,14 +139,14 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
-                    labelStyle: TextStyle(color: Colors.indigo),
+                    labelStyle: const TextStyle(color: Colors.indigo),
                     labelText: 'Password',
                     filled: true,
                     fillColor: Colors.white,
-                    focusedErrorBorder: UnderlineInputBorder(
+                    focusedErrorBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.indigo),
                     ),
-                    errorBorder: UnderlineInputBorder(
+                    errorBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.indigo),
                     ),
                     errorText: passwordError.isNotEmpty ? passwordError : null,
@@ -159,9 +159,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   login();
                 },
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Text(
+                const Text(
                   'Register Now,',
                   style: TextStyle(
                     fontSize: 10,
@@ -174,7 +174,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                       builder: (BuildContext context) => RegistrationForm(),
                     ));
                   },
-                  child: Text(
+                  child: const Text(
                     'SignUp',
                     style: TextStyle(
                       color: Colors.indigo,

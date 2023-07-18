@@ -91,7 +91,7 @@ class _EditProductsState extends State<EditProducts> {
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               controller: productPriceController,
               textAlign: TextAlign.left,
-              style: TextStyle(color: Colors.indigo),
+              style: const TextStyle(color: Colors.indigo),
               decoration: CustomTextFieldDecoration.getInputDecoration(
                 'Enter Product Price:',
               ),
@@ -102,7 +102,7 @@ class _EditProductsState extends State<EditProducts> {
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               controller: productQuantityController,
               textAlign: TextAlign.left,
-              style: TextStyle(color: Colors.indigo),
+              style: const TextStyle(color: Colors.indigo),
               decoration: CustomTextFieldDecoration.getInputDecoration(
                 'Enter Product Quantity:',
               ),

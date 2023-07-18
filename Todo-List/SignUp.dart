@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'DBfile.dart';
@@ -38,17 +37,17 @@ class _RegistrationFormState extends State<RegistrationForm> {
           builder: (BuildContext context) {
             return AlertDialog(
               backgroundColor: Colors.white,
-              title: Text(
+              title: const Text(
                 'Error',
                 style: TextStyle(color: Colors.red),
               ),
-              content: Text(
+              content: const Text(
                 'Email already exists.',
                 style: TextStyle(color: Colors.red),
               ),
               actions: <Widget>[
                 TextButton(
-                  child: Text(
+                  child: const Text(
                     'OK',
                     style: TextStyle(color: Colors.indigo),
                   ),
@@ -76,15 +75,15 @@ class _RegistrationFormState extends State<RegistrationForm> {
             builder: (BuildContext context) {
               return AlertDialog(
                 backgroundColor: Colors.indigo[200],
-                title: CustomLabel(
+                title: const CustomLabel(
                   label: 'Success',
                 ),
-                content: CustomLabel(
+                content: const CustomLabel(
                   label: 'User Registered Successfully',
                 ),
                 actions: <Widget>[
                   TextButton(
-                    child: CustomLabel(
+                    child: const CustomLabel(
                       label: 'Ok',
                     ),
                     onPressed: () {
@@ -119,7 +118,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('To-Do List'),
+        title: const Text('To-Do List'),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
@@ -131,9 +130,9 @@ class _RegistrationFormState extends State<RegistrationForm> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Padding(
+                const Padding(
                   padding:
-                      const EdgeInsets.only(bottom: 20, right: 50, left: 50),
+                      EdgeInsets.only(bottom: 20, right: 50, left: 50),
                   child: HeaderText(label: 'Register User'),
                 ),
                 GestureDetector(
@@ -170,11 +169,11 @@ class _RegistrationFormState extends State<RegistrationForm> {
                             child: Container(
                               width: 30,
                               height: 30,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.white,
                                 shape: BoxShape.circle,
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.edit,
                                 color: Colors.indigo,
                                 size: 20,
@@ -190,7 +189,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       const EdgeInsets.only(bottom: 15, right: 50, left: 50),
                   child: TextFormField(
                     controller: _emailController,
-                    style: TextStyle(color: Colors.indigo),
+                    style: const TextStyle(color: Colors.indigo),
                     decoration:
                         CustomTextFieldDecoration.getInputDecoration('Email'),
                     validator: (value) {
@@ -211,7 +210,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       const EdgeInsets.only(bottom: 15, right: 50, left: 50),
                   child: TextFormField(
                     controller: _passwordController,
-                    style: TextStyle(color: Colors.indigo),
+                    style: const TextStyle(color: Colors.indigo),
                     decoration: CustomTextFieldDecoration.getInputDecoration(
                         'Password'),
                     obscureText: true,
@@ -243,7 +242,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       const EdgeInsets.only(bottom: 15, right: 50, left: 50),
                   child: TextFormField(
                     controller: _firstNameController,
-                    style: TextStyle(color: Colors.indigo),
+                    style: const TextStyle(color: Colors.indigo),
                     decoration: CustomTextFieldDecoration.getInputDecoration(
                         'Frst Name'),
                     validator: (value) {
@@ -263,7 +262,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       const EdgeInsets.only(bottom: 15, right: 50, left: 50),
                   child: TextFormField(
                     controller: _lastNameController,
-                    style: TextStyle(color: Colors.indigo),
+                    style: const TextStyle(color: Colors.indigo),
                     decoration: CustomTextFieldDecoration.getInputDecoration(
                         'Last Name'),
                     validator: (value) {
@@ -284,7 +283,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       const EdgeInsets.only(bottom: 15, right: 50, left: 50),
                   child: TextFormField(
                     controller: _addressController,
-                    style: TextStyle(color: Colors.indigo),
+                    style: const TextStyle(color: Colors.indigo),
                     decoration:
                         CustomTextFieldDecoration.getInputDecoration('Address'),
                     validator: (value) {

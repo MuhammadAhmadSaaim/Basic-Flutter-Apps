@@ -147,7 +147,7 @@ class _ProfilepageState extends State<Profilepage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HeaderText(label: 'Profile Page'),
+              const HeaderText(label: 'Profile Page'),
               const SizedBox(height: 20),
               Center(
                 child: Container(
@@ -166,13 +166,13 @@ class _ProfilepageState extends State<Profilepage> {
                 ),
 
               ),
-              ProfilePageDivider(),
+              const ProfilePageDivider(),
               DataRowWidget(label: 'Email: ', value: email),
               DataRowWidget(label: 'First Name: ', value: fname),
               DataRowWidget(label: 'Last Name: ', value: lname),
               DataRowWidget(label: 'Address: ', value: address),
               DataRowWidget(label: temp != null ? 'Bio: ' : '', value: temp ?? ''),
-              ProfilePageDivider(),
+              const ProfilePageDivider(),
               Center(
                 child: TextButton(
                     onPressed: () {updateprofile();},

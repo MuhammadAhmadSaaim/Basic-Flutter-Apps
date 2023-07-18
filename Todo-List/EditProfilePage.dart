@@ -69,18 +69,18 @@ class _EditProfilePageState extends State<EditProfilePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: Colors.indigo[200],
-          title: Text('Select Source', style: TextStyle(color: Colors.white),),
+          title: const Text('Select Source', style: TextStyle(color: Colors.white),),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
                 TextButton(
-                  child: Text('Gallery', style: TextStyle(color: Colors.indigo),),
+                  child: const Text('Gallery', style: TextStyle(color: Colors.indigo),),
                   onPressed: () {
                     Navigator.of(context).pop(ImageSource.gallery);
                   },
                 ),
                 TextButton(
-                  child: Text('Camera', style: TextStyle(color: Colors.indigo),),
+                  child: const Text('Camera', style: TextStyle(color: Colors.indigo),),
                   onPressed: () {
                     Navigator.of(context).pop(ImageSource.camera);
                   },
@@ -95,7 +95,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       final image = await ImagePicker().pickImage(source: imageSource);
       if (image != null) {
         setState(() {
-          this.picture = image.path;
+          picture = image.path;
         });
       }
     }
@@ -106,7 +106,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Edit Profile'),
+        title: const Text('Edit Profile'),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
@@ -152,11 +152,11 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           child: Container(
                             width: 30,
                             height: 30,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               shape: BoxShape.circle,
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.edit,
                               color: Colors.indigo,
                               size: 20,

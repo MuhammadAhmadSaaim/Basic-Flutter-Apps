@@ -15,16 +15,16 @@ class DataRowWidget extends StatelessWidget {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         Text(
           value,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.indigo,
             fontSize: 18,
           ),
@@ -42,7 +42,7 @@ class ProfilePageDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Divider(
+    return const Divider(
       thickness: 3,
       indent: 20,
       endIndent: 20,
@@ -67,7 +67,7 @@ class CustomElevatedButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white,
         ),
       ),
@@ -93,7 +93,7 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       textAlign: TextAlign.left,
-      style: TextStyle(color: Colors.indigo),
+      style: const TextStyle(color: Colors.indigo),
       decoration: CustomTextFieldDecoration.getInputDecoration(labelText),
     );
   }
@@ -102,14 +102,14 @@ class CustomTextField extends StatelessWidget {
 class CustomTextFieldDecoration {
   static InputDecoration getInputDecoration(String labelText) {
     return InputDecoration(
-      labelStyle: TextStyle(color: Colors.indigo),
+      labelStyle: const TextStyle(color: Colors.indigo),
       labelText: labelText,
       filled: true,
       fillColor: Colors.white,
-      focusedErrorBorder: UnderlineInputBorder(
+      focusedErrorBorder: const UnderlineInputBorder(
         borderSide: BorderSide(color: Colors.indigo),
       ),
-      errorBorder: UnderlineInputBorder(
+      errorBorder: const UnderlineInputBorder(
         borderSide: BorderSide(color: Colors.indigo),
       ),
     );
@@ -132,7 +132,7 @@ class CustomListTile extends StatelessWidget {
     return ListTile(
       title: Text(
         label,
-        style: TextStyle(color: Colors.indigo),
+        style: const TextStyle(color: Colors.indigo),
       ),
       trailing: Icon(
         icon,
@@ -153,7 +153,7 @@ class HeaderText extends StatelessWidget {
     return Center(
       child: Text(
         label,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.bold,
           fontSize: 30,
@@ -172,7 +172,7 @@ class CustomLabel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       label,
-      style: TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.white),
     );
   }
 }

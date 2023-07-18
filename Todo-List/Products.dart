@@ -57,17 +57,17 @@ class _ProductsPageState extends State<ProductsPage> {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: Colors.indigo[500],
-          title: CustomLabel(label: 'Delete Item'),
-          content: CustomLabel(label: 'Are you sure you want to delete this item?',),
+          title: const CustomLabel(label: 'Delete Item'),
+          content: const CustomLabel(label: 'Are you sure you want to delete this item?',),
           actions: [
             TextButton(
-              child: CustomLabel(label: 'Cancel'),
+              child: const CustomLabel(label: 'Cancel'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: CustomLabel(label: 'Delete'),
+              child: const CustomLabel(label: 'Delete'),
               onPressed: () async {
                 final deletedItem =
                     products.firstWhere((element) => element['Productcode'] == id);
@@ -76,7 +76,7 @@ class _ProductsPageState extends State<ProductsPage> {
                 refreshList();
 
                 final snackBar = SnackBar(
-                  content: CustomLabel(label: 'Item deleted'),
+                  content: const CustomLabel(label: 'Item deleted'),
                   action: SnackBarAction(
                     label: 'Undo',
                     textColor: Colors.indigo[200],
@@ -87,7 +87,7 @@ class _ProductsPageState extends State<ProductsPage> {
                       }
                     },
                   ),
-                  duration: Duration(seconds: 3),
+                  duration: const Duration(seconds: 3),
                 );
 
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -143,12 +143,12 @@ class _ProductsPageState extends State<ProductsPage> {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         centerTitle: true,
-        title: Text('To-Do List'),
+        title: const Text('To-Do List'),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
-              icon: Icon(Icons.logout),
+              icon: const Icon(Icons.logout),
               onPressed: () {
                 Logout();
               }),
@@ -214,7 +214,7 @@ class _ProductsPageState extends State<ProductsPage> {
       ),
       backgroundColor: Colors.indigo[200],
       body: Column(children: [
-        Padding(
+        const Padding(
           padding: EdgeInsets.only(top: 20, right: 20, left: 20),
           child: Center(
               child: Text(
@@ -226,10 +226,10 @@ class _ProductsPageState extends State<ProductsPage> {
         Expanded(
           child: ListView.builder(
             itemCount: products.length,
-            padding: EdgeInsets.only(bottom: 20),
+            padding: const EdgeInsets.only(bottom: 20),
             itemBuilder: (context, index) => Card(
               color: Colors.indigo[400],
-              margin: EdgeInsets.only(top: 20, right: 15, left: 15),
+              margin: const EdgeInsets.only(top: 20, right: 15, left: 15),
               child: GestureDetector(
                 onTap: () {
                   itemdialogbox(products[index]['Productcode']);
@@ -237,7 +237,7 @@ class _ProductsPageState extends State<ProductsPage> {
                 child: ListTile(
                   title: Text(
                     products[index]['PName'],
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,23 +245,23 @@ class _ProductsPageState extends State<ProductsPage> {
                       const SizedBox(height: 5),
                       Text(
                         'Rs ${products[index]['PPrice'].toString() ?? 'NA'}',
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       ),
                       const SizedBox(height: 5),
                       Text(
                         'Quantity: ${products[index]['PQuantity'].toString() ?? 'NA'}',
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       ),
                       const SizedBox(height: 5),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Quantity * Price: ',
                             style: TextStyle(color: Colors.white),
                           ),
                           Text(
                             'Rs ${calculateTotalPrice(products[index]['PPrice'].toString(), products[index]['PQuantity'].toString())}',
-                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)
+                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)
                         ],
                       )
                     ],
@@ -286,9 +286,9 @@ class _ProductsPageState extends State<ProductsPage> {
         onPressed: () {
           itemdialogbox(null);
         },
-        icon: Icon(Icons.add_task),
+        icon: const Icon(Icons.add_task),
         backgroundColor: Colors.indigo,
-        label: Text('Add Product'),
+        label: const Text('Add Product'),
       ),
     );
   }
